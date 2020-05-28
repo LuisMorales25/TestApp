@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>BRANDNEWS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngIf='items'>
+    
+    <ion-card>
+      <ion-card-header>
+       
+        <ion-card-title>{{items.title }}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{items.body }}
+      </ion-card-content>
+    </ion-card>
+
+   </ion-item>
+   <h1>   comments</h1>
+   <ion-item *ngIf='comments'>
+    <ion-list>
+      <ion-item *ngFor="let comment of comments"> 
+       
+        <ion-label>
+         
+          <h3>{{ comment.name }}</h3>
+          <p>{{ comment.body }}</p>
+        </ion-label>
+      
+      </ion-item>
+    </ion-list>
+   
+   </ion-item>
+   <ion-item>
+    <ion-button (click)="dash()" color="dark">DashBoard</ion-button>
+   </ion-item>
+   
+</ion-content>
